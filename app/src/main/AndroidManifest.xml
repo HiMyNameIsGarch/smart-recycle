@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartRecycle">
         <activity
+            android:name=".Succes"
+            android:exported="false" />
+        <activity
             android:name=".Register"
             android:exported="false" />
         <!--
