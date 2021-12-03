@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartRecycle">
         <activity
+            android:name=".MainContent"
+            android:exported="false" />
+        <activity
             android:name=".Login"
             android:exported="false" />
         <activity
