@@ -12,7 +12,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.smart_recycle.databinding.ActivityMapsBinding;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+    private final int ZOOM_LEVEL = 18;
+    private final int ANIMATION_DURATION_MILISECONDS = 5000;
+    private List<GarbageMarker> garbageMarkers;
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
@@ -24,28 +30,35 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        garbageMarkers = GetAllGarbageMarkers();
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
+    private List<GarbageMarker> GetAllGarbageMarkers() {
+        // Here we can get all the garbage markes but for now we are gonna hard code it
+        List<GarbageMarker> garbageMarkers = new ArrayList<GarbageMarker>();
 
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
+        garbageMarkers.add(new GarbageMarker("Bottle of Water", 45.7574195,21.2280983));
+        garbageMarkers.add(new GarbageMarker("Dorna", 45.7573986,21.2278718));
+        garbageMarkers.add(new GarbageMarker("Windows", 45.7576492,21.2271313));
+        garbageMarkers.add(new GarbageMarker("Hello World", 45.7571009,21.228577));
+        garbageMarkers.add(new GarbageMarker("Idk to put here", 45.7568755,21.2286756));
+        
+        return garbageMarkers;
+    }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng startingPoint = new LatLng(45.7568755, 21.2286756);
+        for(GarbageMarker gm : garbageMarkers){
+            LatLng gmpos = new LatLng(gm.Longitude, gm.Latitude);
+            mMap.addMarker(new MarkerOptions().position(gmpos).title(gm.Name));
+        }
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(startingPoint, ZOOM_LEVEL),ANIMATION_DURATION_MILISECONDS, null);
     }
 }
