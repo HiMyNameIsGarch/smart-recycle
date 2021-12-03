@@ -115,9 +115,22 @@
         android:id="@+id/imageView"
         android:layout_width="445dp"
         android:layout_height="208dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="48dp"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         app:srcCompat="?android:attr/panelFullBackground" />
+
+    <Button
+        android:id="@+id/login2"
+        android:layout_width="106dp"
+        android:layout_height="49dp"
+        android:text="LOGIN"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.827" />
 </androidx.constraintlayout.widget.ConstraintLayout>
