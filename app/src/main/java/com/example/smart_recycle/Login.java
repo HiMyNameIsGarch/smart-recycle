@@ -38,7 +38,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         forgotpass.setOnClickListener(this);
         mAuth= FirebaseAuth.getInstance();
     }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -50,7 +49,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 break;
             case R.id.button4:
                 startActivity(new Intent(Login.this, PassFG.class));
-
         }
     }
     private void userLogin(){
@@ -79,7 +77,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    startActivity(new Intent(Login.this, Succes.class));
+                    editTextPassword.getText().clear();
+                    editTextEmail.getText().clear();
+                    startActivity(new Intent(Login.this, MapsActivity.class));
                     Toast.makeText(Login.this, "Successfully logged in", Toast.LENGTH_LONG).show();
                 }else {
                     Toast.makeText(Login.this, "Incorrect password or email", Toast.LENGTH_LONG).show();
