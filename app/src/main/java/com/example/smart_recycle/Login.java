@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private TextView register;
     private EditText editTextEmail, editTextPassword;
-    private Button signIn;
+    private Button signIn, forgotpass;
     private FirebaseAuth mAuth;
 
     @Override
@@ -34,6 +34,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         signIn.setOnClickListener(this);
         editTextEmail=(EditText) findViewById(R.id.email2);
         editTextPassword=(EditText) findViewById(R.id.password2);
+        forgotpass =(Button)findViewById(R.id.button4);
+        forgotpass.setOnClickListener(this);
         mAuth= FirebaseAuth.getInstance();
     }
 
@@ -46,6 +48,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             case R.id.login2:
                 userLogin();
                 break;
+            case R.id.button4:
+                startActivity(new Intent(Login.this, PassFG.class));
+
         }
     }
     private void userLogin(){

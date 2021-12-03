@@ -62,19 +62,20 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#66ff99"
         android:text="Register"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.827" />
+        app:layout_constraintVertical_bias="0.932" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="445dp"
         android:layout_height="208dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="84dp"
         android:scaleType="fitXY"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Password"
@@ -82,11 +83,12 @@
 
     <TextView
         android:id="@+id/Banner"
-        android:layout_width="98dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="36dp"
+        android:layout_width="140dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:text="Register"
+        android:textColor="#66ff99"
         app:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -135,8 +137,8 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="95dp"
-        android:layout_height="25dp"
+        android:layout_width="129dp"
+        android:layout_height="32dp"
         android:fontFamily="@font/anonymous_pro_bold_italic"
         android:text="Password"
         android:textSize="20sp"
