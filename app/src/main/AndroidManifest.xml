@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartRecycle">
         <activity
-            android:name=".QrCode"
+            android:name=".AfterLoginMenu"
             android:exported="false" />
         <activity
             android:name=".MapsActivity"

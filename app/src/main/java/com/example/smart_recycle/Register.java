@@ -97,7 +97,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    User user = new User(name, age, email);
+                    User user = new User(name, age, email,  0);
                     FirebaseDatabase.getInstance().getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).
                             setValue(user).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
@@ -119,8 +119,5 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
                 }
             }
         });
-
     }
-
-
 }
