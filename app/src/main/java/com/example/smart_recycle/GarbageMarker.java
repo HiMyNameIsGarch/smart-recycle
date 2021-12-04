@@ -9,4 +9,7 @@ public class GarbageMarker {
         Longitude = longitude;
         Latitude = lat;
     }
+    public GarbageMarker() {
+
+    }
 }
