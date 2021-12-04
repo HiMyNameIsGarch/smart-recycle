@@ -60,6 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
+                mMap.clear();
                 for(DataSnapshot garbageSnapshot: snapshot.getChildren()){
                     GarbageMarker gm = garbageSnapshot.getValue(GarbageMarker.class);
                     LatLng gmpos = new LatLng(gm.Longitude, gm.Latitude);
