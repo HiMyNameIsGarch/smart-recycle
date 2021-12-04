@@ -39,18 +39,19 @@
 
     <TextView
         android:id="@+id/garbagepointcounter"
-        android:layout_width="372dp"
-        android:layout_height="122dp"
+        android:layout_width="310dp"
+        android:layout_height="106dp"
         android:fontFamily="@font/anonymous_pro_bold_italic"
         android:text="Garbage points collected"
         android:textColor="#66ff99"
+        android:textSize="8sp"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.589"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.436" />
+        app:layout_constraintVertical_bias="0.43" />
 
     <Button
         android:id="@+id/Logout"
@@ -71,14 +72,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="97dp"
-        android:layout_marginTop="237dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="58dp"
         android:background="@drawable/buttons"
         android:text="leaderboard"
+        android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/Logout"
-        app:layout_constraintTop_toBottomOf="@+id/garbagepointcounter" />
+        app:layout_constraintHorizontal_bias="0.714"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
