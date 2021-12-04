@@ -79,7 +79,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 if(task.isSuccessful()){
                     editTextPassword.getText().clear();
                     editTextEmail.getText().clear();
-                    startActivity(new Intent(Login.this, AfterLoginMenu.class));
+                    startActivity(new Intent(Login.this, MapsActivity.class));
                     Toast.makeText(Login.this, "Successfully logged in", Toast.LENGTH_LONG).show();
                 }else {
                     Toast.makeText(Login.this, "Incorrect password or email", Toast.LENGTH_LONG).show();

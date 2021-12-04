@@ -48,7 +48,6 @@ public class AfterLoginMenu extends AppCompatActivity {
 
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 

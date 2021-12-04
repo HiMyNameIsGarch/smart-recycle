@@ -3,9 +3,12 @@ package com.example.smart_recycle;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -15,6 +18,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.smart_recycle.databinding.ActivityMapsBinding;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -35,16 +39,40 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    Button scan, maps;
+    Button scan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        scan = (Button)findViewById(R.id.button6) ;
+        user= FirebaseAuth.getInstance().getCurrentUser();
+        reference =FirebaseDatabase.getInstance().getReference("Users");
+        userID=user.getUid();
+        final TextView showname = (TextView) findViewById(R.id.textView2);
+        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                User userprofile = snapshot.getValue(User.class);
+                if(userprofile!=null){
+                    String fullname  = userprofile.name;
+                    String email = userprofile.email;
+                    int garbagecount = userprofile.garbagePoints;
+                    showname.setText("Welcome, "+fullname+" !\nYou have "+garbagecount+" garbagepoints");
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
 
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
+            }
+        });
+        scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MapsActivity.this, QRCodeScanner.class));
+            }
+        });
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
