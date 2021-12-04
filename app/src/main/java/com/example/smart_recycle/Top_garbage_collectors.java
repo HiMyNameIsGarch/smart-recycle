@@ -19,8 +19,9 @@ import java.util.Collections;
 import java.util.List;
 
 public class Top_garbage_collectors extends AppCompatActivity {
+    private final int MAX_TOP_USERS = 10;
     private DatabaseReference dbUsers = FirebaseDatabase.getInstance().getReference();
-    private Query query = dbUsers.child("Users").orderByChild("garbagePoints").limitToFirst(10);
+    private Query query = dbUsers.child("Users").orderByChild("garbagePoints").limitToFirst(MAX_TOP_USERS);
     public TextView lista;
     String listastring="";
     @Override
@@ -37,15 +38,15 @@ public class Top_garbage_collectors extends AppCompatActivity {
         ValueEventListener eventListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                long i = dataSnapshot.getChildrenCount();
-                if(i>10){
-                    i=10;
+                long postsCount = dataSnapshot.getChildrenCount();
+                if(postsCount > MAX_TOP_USERS) {
+                    postsCount = MAX_TOP_USERS;
                 }
                 for(DataSnapshot ds : dataSnapshot.getChildren()) {
                     System.out.println(ds.getValue(User.class).name);
                     User user = ds.getValue(User.class);
-                    listastring = i+". "+ user.name +": "+ user.garbagePoints+ "\n"+listastring;
-                    i--;
+                    listastring = postsCount + ". " + user.name + ": " + user.garbagePoints + "\n" + listastring;
+                    postsCount--;
                     lista.setText(listastring);
                 }
             }
