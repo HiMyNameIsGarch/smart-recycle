@@ -40,7 +40,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    Button scan, meniu;
+    Button scan, meniu, shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +50,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setContentView(binding.getRoot());
         scan = (Button)findViewById(R.id.button6) ;
         meniu=(Button)findViewById(R.id.profile);
+        shop = (Button)findViewById(R.id.shop);
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference =FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();
@@ -80,6 +81,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MapsActivity.this, QRCodeScanner.class));
+            }
+        });
+        shop.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MapsActivity.this, Coupons.class));
             }
         });
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
