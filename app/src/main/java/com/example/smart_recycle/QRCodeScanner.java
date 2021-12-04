@@ -51,8 +51,13 @@ public class QRCodeScanner extends AppCompatActivity {
                                     String rez= result.getText().trim();
                                     if (copil.equals(rez)) {
                                         startActivity(new Intent(QRCodeScanner.this,Succes.class));
+                                        verif=true;
                                         break;
                                     }
+                                }
+                                if(verif==false){
+                                    Toast.makeText(QRCodeScanner.this, "Invalid QR Code", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(QRCodeScanner.this, QRCodeScanner.class));
                                 }
                             }
                             @Override
@@ -60,10 +65,7 @@ public class QRCodeScanner extends AppCompatActivity {
 
                             }
                         });
-                        if(!verif){
-                            Toast.makeText(QRCodeScanner.this, "Invalid QR Code", Toast.LENGTH_LONG).show();
-                            startActivity(new Intent(QRCodeScanner.this, QRCodeScanner.class));
-                        }
+
                     }
 
                 });
