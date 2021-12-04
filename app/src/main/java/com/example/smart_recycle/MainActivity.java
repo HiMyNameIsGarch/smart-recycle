@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         skip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MapsActivity.class));
+                startActivity(new Intent(MainActivity.this, Top_garbage_collectors.class));
             }
         });
         login.setOnClickListener(new View.OnClickListener() {

@@ -18,6 +18,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartRecycle">
         <activity
+            android:name=".Top_garbage_collectors"
+            android:exported="false" />
+        <activity
             android:name=".QRCodeScanner"
             android:exported="false" />
         <activity
