@@ -23,7 +23,8 @@ public class Succes extends AppCompatActivity {
     private DatabaseReference reference;
     private String userID;
     private DatabaseReference mDatabase;
-    int a=0;
+    private final int DEFAULT_POINTS = 100;
+    private int currentGarbagePoints = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +42,8 @@ public class Succes extends AppCompatActivity {
                 mDatabase.child("Users").child(userID).child("garbagePoints").addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
-                        a = snapshot.getValue(int.class);
-                        mDatabase.child("Users").child(userID).child("garbagePoints").setValue(a+100);z`
+                        currentGarbagePoints = snapshot.getValue(int.class);
+                        mDatabase.child("Users").child(userID).child("garbagePoints").setValue(currentGarbagePoints + DEFAULT_POINTS);
                     }
 
                     @Override
