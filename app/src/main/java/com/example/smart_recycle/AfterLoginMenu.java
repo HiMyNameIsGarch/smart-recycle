@@ -21,12 +21,13 @@ public class AfterLoginMenu extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    Button scan;
+    Button scan, maps;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_login_menu);
         scan = (Button)findViewById(R.id.QR) ;
+        maps = (Button)findViewById(R.id.MapsButton) ;
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference =FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();
@@ -44,6 +45,7 @@ public class AfterLoginMenu extends AppCompatActivity {
                     showname.setText("Welcome, "+fullname+" !");
                     showemail.setText("Your email is: \n"+ email);
                     showgarbage.setText("You have "+garbagecount+" recycle points");
+
                 }
             }
 
@@ -56,6 +58,12 @@ public class AfterLoginMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(AfterLoginMenu.this, QRCodeScanner.class));
+            }
+        });
+        maps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AfterLoginMenu.this, MapsActivity.class));
             }
         });
     }
