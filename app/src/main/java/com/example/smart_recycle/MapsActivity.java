@@ -5,6 +5,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.widget.Button;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -14,6 +15,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.example.smart_recycle.databinding.ActivityMapsBinding;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -30,6 +32,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
     private DatabaseReference mDatabase;
+    private FirebaseUser user;
+    private DatabaseReference reference;
+    private String userID;
+    Button scan, maps;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
