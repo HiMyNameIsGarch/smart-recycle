@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/unihack/smart-recycle/app/src/main/res/drawable/buttons.xml" value="0.2866666666666667" />
         <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_after_login_menu.xml" value="0.20260416666666667" />
+        <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_main.xml" value="0.275" />
         <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_maps.xml" value="0.33" />
+        <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_register.xml" value="0.275" />
         <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_test_map.xml" value="0.26145833333333335" />
       </map>
     </option>
