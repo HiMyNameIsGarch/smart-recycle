@@ -21,7 +21,7 @@ public class AfterLoginMenu extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    Button logout;
+    Button logout, leaderboard;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,6 +30,7 @@ public class AfterLoginMenu extends AppCompatActivity {
         reference =FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();
         logout=(Button) findViewById(R.id.Logout);
+        leaderboard=(Button) findViewById(R.id.leaderboard);
         final TextView showname = (TextView) findViewById(R.id.welcome);
         final TextView showemail = (TextView) findViewById(R.id.showemail);
         final TextView showgarbage = (TextView) findViewById(R.id.garbagepointcounter);
@@ -57,6 +58,14 @@ public class AfterLoginMenu extends AppCompatActivity {
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(AfterLoginMenu.this,MainActivity.class));
+                finish();
+            }
+        });
+        leaderboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(AfterLoginMenu.this,Top_garbage_collectors.class));
                 finish();
             }
         });
