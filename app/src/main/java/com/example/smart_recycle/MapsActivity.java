@@ -28,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
     private final int ZOOM_LEVEL = 18;
@@ -39,7 +40,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    Button scan;
+    Button scan, meniu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         scan = (Button)findViewById(R.id.button6) ;
+        meniu=(Button)findViewById(R.id.profile);
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference =FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();
@@ -66,6 +68,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        meniu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MapsActivity.this, AfterLoginMenu.class));
             }
         });
         scan.setOnClickListener(new View.OnClickListener() {

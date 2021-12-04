@@ -37,6 +37,10 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         forgotpass =(Button)findViewById(R.id.button4);
         forgotpass.setOnClickListener(this);
         mAuth= FirebaseAuth.getInstance();
+        if(mAuth.getCurrentUser()!=null){
+            startActivity(new Intent(getBaseContext(),MapsActivity.class));
+            finish();
+        }
     }
     @Override
     public void onClick(View view) {
@@ -50,6 +54,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             case R.id.button4:
                 startActivity(new Intent(Login.this, PassFG.class));
         }
+
     }
     private void userLogin(){
             String email = editTextEmail.getText().toString().trim();

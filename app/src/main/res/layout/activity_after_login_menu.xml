@@ -39,40 +39,29 @@
 
     <TextView
         android:id="@+id/garbagepointcounter"
-        android:layout_width="365dp"
-        android:layout_height="43dp"
+        android:layout_width="372dp"
+        android:layout_height="122dp"
         android:fontFamily="@font/anonymous_pro_bold_italic"
         android:text="Garbage points collected"
         android:textColor="#66ff99"
         app:autoSizeTextType="uniform"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.652"
+        app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.436" />
 
     <Button
-        android:id="@+id/QR"
-        android:layout_width="157dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#66ff99"
-        android:text="Scan QR"
+        android:id="@+id/Logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.182"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.913" />
 
-    <Button
-        android:id="@+id/MapsButton"
-        android:layout_width="157dp"
-        android:layout_height="50dp"
-        android:backgroundTint="#66ff99"
-        android:text="Open Maps"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.629" />
 </androidx.constraintlayout.widget.ConstraintLayout>

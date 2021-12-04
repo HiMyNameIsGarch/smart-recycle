@@ -21,16 +21,15 @@ public class AfterLoginMenu extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
-    Button scan, maps;
+    Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_login_menu);
-        scan = (Button)findViewById(R.id.QR) ;
-        maps = (Button)findViewById(R.id.MapsButton) ;
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference =FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();
+        logout=(Button) findViewById(R.id.Logout);
         final TextView showname = (TextView) findViewById(R.id.welcome);
         final TextView showemail = (TextView) findViewById(R.id.showemail);
         final TextView showgarbage = (TextView) findViewById(R.id.garbagepointcounter);
@@ -53,16 +52,12 @@ public class AfterLoginMenu extends AppCompatActivity {
 
             }
         });
-        scan.setOnClickListener(new View.OnClickListener() {
+        logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AfterLoginMenu.this, QRCodeScanner.class));
-            }
-        });
-        maps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(AfterLoginMenu.this, MapsActivity.class));
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(AfterLoginMenu.this,MainActivity.class));
+                finish();
             }
         });
     }
