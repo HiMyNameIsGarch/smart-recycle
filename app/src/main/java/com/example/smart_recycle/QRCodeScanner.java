@@ -19,12 +19,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.Result;
 
+import java.util.concurrent.TimeUnit;
+
 public class QRCodeScanner extends AppCompatActivity {
     CodeScanner codeScanner;
     CodeScannerView scannView;
     TextView resultData;
+    Boolean verif=false;
     private DatabaseReference mDatabase;
-    Boolean Verif = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,24 +47,25 @@ public class QRCodeScanner extends AppCompatActivity {
                             @Override
                             public void onDataChange(DataSnapshot snapshot) {
                                 for (DataSnapshot child : snapshot.getChildren()) {
-                                    if (result.getText() == child.getKey()) {
-                                    } else {
-                                        resultData.setText(result.getText());
-
-                                        Verif= true;
+                                    String copil = child.getKey().trim();
+                                    String rez= result.getText().trim();
+                                    if (copil.equals(rez)) {
                                         startActivity(new Intent(QRCodeScanner.this,Succes.class));
                                         break;
                                     }
-
                                 }
                             }
-
                             @Override
                             public void onCancelled(@NonNull DatabaseError error) {
 
                             }
                         });
+                        if(!verif){
+                            Toast.makeText(QRCodeScanner.this, "Invalid QR Code", Toast.LENGTH_LONG).show();
+                            startActivity(new Intent(QRCodeScanner.this, QRCodeScanner.class));
+                        }
                     }
+
                 });
             }
         });
