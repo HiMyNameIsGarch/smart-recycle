@@ -3,7 +3,10 @@ package com.example.smart_recycle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -18,10 +21,12 @@ public class AfterLoginMenu extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
     private String userID;
+    Button scan;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_after_login_menu);
+        scan = (Button)findViewById(R.id.QR) ;
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference =FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();
@@ -45,6 +50,12 @@ public class AfterLoginMenu extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
+            }
+        });
+        scan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(AfterLoginMenu.this, QRCodeScanner.class));
             }
         });
     }

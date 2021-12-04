@@ -55,4 +55,5 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.budiyev.android:code-scanner:2.1.0'
 
+
 }
