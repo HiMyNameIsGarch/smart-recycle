@@ -3,6 +3,7 @@ package com.example.smart_recycle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -44,6 +45,7 @@ public class Succes extends AppCompatActivity {
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         currentGarbagePoints = snapshot.getValue(int.class);
                         mDatabase.child("Users").child(userID).child("garbagePoints").setValue(currentGarbagePoints + DEFAULT_POINTS);
+                        startActivity(new Intent(Succes.this, MapsActivity.class));
                     }
 
                     @Override

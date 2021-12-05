@@ -14,9 +14,12 @@
         android:layout_marginStart="150dp"
         android:layout_marginEnd="150dp"
         android:layout_marginBottom="86dp"
-        android:text="Welcome"
+        android:gravity="center"
+        android:text="Welcome to
+
+         Smart Recycle"
         android:textColor="#66ff99"
-        android:textSize="48sp"
+        android:textSize="36dp"
         android:translationZ="2dp"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,24 +64,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.564" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="85dp"
-        android:layout_marginEnd="150dp"
-        android:background="@drawable/buttons"
-        android:backgroundTint="#66ff99"
-        android:fontFamily="@font/audiowide"
-        android:text="@string/skip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.478"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.856" />
 
     <ImageView
         android:id="@+id/imageView4"
