@@ -42,6 +42,7 @@ public class Top_garbage_collectors extends AppCompatActivity {
             }
         });
     }
+
     private void DisplayTopUsers() {
 
         List<User> topUsers = new ArrayList<User>();

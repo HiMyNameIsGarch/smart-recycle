@@ -24,10 +24,12 @@
 
     <Button
         android:id="@+id/Succes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="207dp"
+        android:layout_height="61dp"
+        android:background="@drawable/buttons"
         android:fontFamily="@font/audiowide"
-        android:text="Button"
+        android:text="Collect credits"
+        android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
