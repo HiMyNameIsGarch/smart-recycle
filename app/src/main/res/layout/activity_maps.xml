@@ -15,7 +15,7 @@
         android:layout_marginEnd="36dp"
         android:layout_marginBottom="43dp"
         android:background="@drawable/buttons"
-        android:fontFamily="@font/audiowode2"
+        android:fontFamily="@font/audiowide"
         android:text="shop"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -66,6 +66,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:context=".MapsActivity" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
