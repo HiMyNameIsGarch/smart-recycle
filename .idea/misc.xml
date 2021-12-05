@@ -3,6 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_after_login_menu.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_coupons.xml" value="0.33" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_login.xml" value="0.490036231884058" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_main.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_maps.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_pass_fg.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_qrcode_scanner.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_register.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_succes.xml" value="0.5541666666666667" />
+        <entry key="..\:/UniHack/smart-recycle/app/src/main/res/layout/activity_top_garbage_collectors.xml" value="0.33" />
         <entry key="..\:/unihack/smart-recycle/app/src/main/res/drawable/buttons.xml" value="0.2866666666666667" />
         <entry key="..\:/unihack/smart-recycle/app/src/main/res/drawable/buttons2.xml" value="0.284375" />
         <entry key="..\:/unihack/smart-recycle/app/src/main/res/layout/activity_after_login_menu.xml" value="0.33" />
@@ -20,5 +30,5 @@
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>

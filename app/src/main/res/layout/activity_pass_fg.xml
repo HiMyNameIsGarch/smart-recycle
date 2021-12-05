@@ -8,23 +8,26 @@
 
     <TextView
         android:id="@+id/textView11"
-        android:layout_width="171dp"
-        android:layout_height="45dp"
+        android:layout_width="200dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/audiowide"
         android:gravity="center"
         android:text="Insert your email"
         android:textColor="#66ff99"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.172" />
+        app:layout_constraintVertical_bias="0.175" />
 
     <EditText
         android:id="@+id/resetemail"
         android:layout_width="326dp"
         android:layout_height="48dp"
         android:ems="10"
+        android:fontFamily="@font/audiowide"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,11 +40,12 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#66ff99"
+        android:fontFamily="@font/audiowide"
         android:text="Send password reset email"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499"
-        android:backgroundTint="#66ff99"/>
+        app:layout_constraintVertical_bias="0.499" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,31 +9,178 @@
 
   <Button
       android:id="@+id/bilet"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="86dp"
-      android:layout_marginTop="103dp"
-      android:layout_marginEnd="237dp"
-      android:layout_marginBottom="580dp"
+      android:layout_width="193dp"
+      android:layout_height="58dp"
+      android:background="@drawable/buttons"
+      android:backgroundTint="#66ff99"
+      android:fontFamily="@font/audiowide"
       android:text="Buy bus ticket"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.081"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.282" />
+
+  <Button
+      android:id="@+id/Cupon"
+      android:layout_width="178dp"
+      android:layout_height="58dp"
+      android:background="@drawable/buttons"
+      android:backgroundTint="#66ff99"
+      android:fontFamily="@font/audiowide"
+      android:text="Buy Coupon"
+      android:textSize="20sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.068"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.462" />
+
+  <Button
+      android:id="@+id/returnbutton2"
+      android:layout_width="156dp"
+      android:layout_height="61dp"
+      android:background="@drawable/buttons"
+      android:backgroundTint="#66ff99"
+      android:fontFamily="@font/audiowide"
+      android:text="Return"
+      android:textSize="24sp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.771" />
+
+  <ImageView
+      android:id="@+id/buslogo"
+      android:layout_width="147dp"
+      android:layout_height="56dp"
+      android:translationZ="2dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.829"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.28"
+      tools:srcCompat="@drawable/busTicket" />
+
+  <ImageView
+      android:id="@+id/buslogo2"
+      android:layout_width="147dp"
+      android:layout_height="56dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.829"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.46"
+      tools:srcCompat="@drawable/cupon" />
+
+  <ImageView
+      android:id="@+id/imageView5"
+      android:layout_width="416dp"
+      android:layout_height="173dp"
+      android:fitsSystemWindows="false"
+      android:rotationX="180"
+      android:scaleType="fitXY"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="?android:attr/panelFullBackground" />
+
+  <ImageView
+      android:id="@+id/imageView6"
+      android:layout_width="217dp"
+      android:layout_height="135dp"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.963"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.248"
+      app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+  <ImageView
+      android:id="@+id/imageView9"
+      android:layout_width="217dp"
+      android:layout_height="135dp"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.963"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.248"
+      app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+  <ImageView
+      android:id="@+id/imageView10"
+      android:layout_width="217dp"
+      android:layout_height="135dp"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.963"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.248"
+      app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+  <ImageView
+      android:id="@+id/imageView7"
+      android:layout_width="217dp"
+      android:layout_height="135dp"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.963"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.451"
+      app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+  <ImageView
+      android:id="@+id/imageView11"
+      android:layout_width="217dp"
+      android:layout_height="135dp"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.963"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.451"
+      app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+  <ImageView
+      android:id="@+id/imageView8"
+      android:layout_width="217dp"
+      android:layout_height="135dp"
+      android:scaleType="fitXY"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.963"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.451"
+      app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+  <TextView
+      android:id="@+id/shoptext"
+      android:layout_width="179dp"
+      android:layout_height="69dp"
+      android:fontFamily="@font/audiowide"
+      android:gravity="center"
+      android:text="Shop"
+      android:textColor="#66ff99"
+      app:autoSizeTextType="uniform"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <Button
-      android:id="@+id/returnbutton"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_marginStart="22dp"
-      android:layout_marginTop="18dp"
-      android:layout_marginEnd="301dp"
-      android:layout_marginBottom="37dp"
-      android:text="Return"
-      app:layout_constraintBottom_toTopOf="@+id/bilet"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.0"
-      app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.0" />
+      app:layout_constraintVertical_bias="0.057" />" />
 </androidx.constraintlayout.widget.ConstraintLayout>

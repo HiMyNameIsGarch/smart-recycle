@@ -30,7 +30,7 @@ public class Coupons extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coupons);
         succes=(Button)findViewById(R.id.bilet);
-        returnbtn=(Button)findViewById(R.id.returnbutton);
+        returnbtn=(Button)findViewById(R.id.returnbutton2);
         user= FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users");
         userID=user.getUid();

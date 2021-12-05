@@ -4,7 +4,10 @@ import static com.google.android.gms.tasks.Tasks.await;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -15,10 +18,10 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class Top_garbage_collectors extends AppCompatActivity {
+    Button returnbtn;
     private final int MAX_TOP_USERS = 10;
     private DatabaseReference dbUsers = FirebaseDatabase.getInstance().getReference();
     private Query query = dbUsers.child("Users").orderByChild("garbagePoints").limitToFirst(MAX_TOP_USERS);
@@ -30,7 +33,14 @@ public class Top_garbage_collectors extends AppCompatActivity {
         setContentView(R.layout.activity_top_garbage_collectors);
         lista=(TextView)findViewById(R.id.listatop);
         lista.setText(listastring);
+        returnbtn=(Button)findViewById(R.id.returnbutton2);
         DisplayTopUsers();
+        returnbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Top_garbage_collectors.this, MapsActivity.class));
+            }
+        });
     }
     private void DisplayTopUsers() {
 
