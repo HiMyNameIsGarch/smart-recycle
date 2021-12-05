@@ -31,7 +31,7 @@ import java.util.Map;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
     private final int ZOOM_LEVEL = 18;
-    private final int ANIMATION_DURATION_MILISECONDS = 5000;
+    private final int ANIMATION_DURATION_MILISECONDS = 2000;
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
@@ -104,7 +104,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return false;
             }
         });
-
         mDatabase = FirebaseDatabase.getInstance().getReference("GarbageMarkers");
         mDatabase.addValueEventListener(new ValueEventListener() {
             @Override

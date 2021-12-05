@@ -79,5 +79,36 @@
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.057" />" />
+      app:layout_constraintVertical_bias="0.057" />
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="45dp"
+      android:layout_marginTop="3dp"
+      android:layout_marginEnd="308dp"
+      android:layout_marginBottom="41dp"
+      android:fontFamily="@font/audiowide"
+      android:text="1000 points"
+      app:layout_constraintBottom_toTopOf="@+id/Cupon"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.175"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/bilet"
+      app:layout_constraintVertical_bias="0.0" />
+
+  <TextView
+      android:id="@+id/textView12"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="2dp"
+      android:layout_marginBottom="128dp"
+      android:fontFamily="@font/audiowide"
+      android:text="10000 points"
+      app:layout_constraintBottom_toTopOf="@+id/returnbutton2"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.126"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/Cupon" />" />
 </androidx.constraintlayout.widget.ConstraintLayout>
